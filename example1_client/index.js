@@ -11,9 +11,6 @@ const main = async () => {
 	listenToPerformance();
 	const root = document.querySelector('#root')
 
-		for(let i =0; i<1e4; i++) {
-			console.log(i)
-		}
 	App().render(root)
 	
 	const emojiJson = await fetch('http://localhost:3000/api')

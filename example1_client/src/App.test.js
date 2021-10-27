@@ -31,7 +31,7 @@ describe('App', () => {
 		await browser.close()
 	})
 
-	xdescribe('render', () => {
+	describe('render', () => {
 		it('should score 0.9 at least on FCP', async () => {
 			expect(lighthouseResponse.lhr.audits['first-contentful-paint'].score).toBeGreaterThan(0.9)
 		});

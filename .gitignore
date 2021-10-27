@@ -1,0 +1,4 @@
+node_modules
+example1_client/dist
+.parcel-cache
+.DS_Store

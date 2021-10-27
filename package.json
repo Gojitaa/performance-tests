@@ -1,0 +1,29 @@
+{
+  "name": "section1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:client": "cd example1_client && parcel serve index.html",
+    "start:api": "cd example1_server && node server.js",
+    "start": "concurrently \"npm run start:api\" \"npm run start:client\"",
+    "test": "jest --detectOpenHandles",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-jest": "^27.3.1",
+    "concurrently": "^6.3.0",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "jest-dev-server": "^6.0.0",
+    "jest-puppeteer": "^6.0.0",
+    "lighthouse": "^8.5.1",
+    "parcel": "^2.0.0",
+    "puppeteer": "^10.4.0"
+  }
+}

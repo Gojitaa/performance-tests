@@ -32,15 +32,15 @@ describe('App', () => {
 	})
 
 	describe('render', () => {
-		it('should score 0.9 at least on FCP', async () => {
+		it('should score 0.9 on FCP', async () => {
 			expect(lighthouseResponse.lhr.audits['first-contentful-paint'].score).toBeGreaterThan(0.9)
 		});
 
-		it('should score 0.9 at least on LCP', async () => {
+		it('should score 0.9 on LCP', async () => {
 			expect(lighthouseResponse.lhr.audits['largest-contentful-paint'].score).toBeGreaterThan(0.9)
 		});
 
-		it('should score 0.9 at least on FID', async () => {
+		it('should score 0.9 on FID', async () => {
 			expect(lighthouseResponse.lhr.audits['max-potential-fid'].score).toBeGreaterThan(0.9)
 		});
 

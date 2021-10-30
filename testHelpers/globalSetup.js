@@ -1,5 +1,4 @@
 const { setup: setupDevServer } = require('jest-dev-server')
-const puppeteer = require('puppeteer')
 
 module.exports = async function globalSetup() {
   await setupDevServer([

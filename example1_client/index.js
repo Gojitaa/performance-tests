@@ -1,15 +1,10 @@
 import App from './src/App';
-
-const observer = new PerformanceObserver(function(list) {
-    const perfEntries = list.getEntries();
-    for (let i = 0; i < perfEntries.length; i++) {
-        console.log(perfEntries[i])
-    }
-});
+import PerfCure from 'perfcure';
 
 const main = async () => {
-	listenToPerformance();
 	const root = document.querySelector('#root')
+	const performanceMonitor = new PerfCure();
+	performanceMonitor.init(entries => console.log(entries));
 
 	App().render(root)
 	
@@ -17,15 +12,6 @@ const main = async () => {
 	const emojies = await emojiJson.json()
 
 	App({ emojies }).render(root)
-}
-	
-
-
-const listenToPerformance = () => {
-	observer.observe({type: 'resource', buffered: true})
-	observer.observe({type: 'longtask', buffered: true})
-	observer.observe({type: "paint", buffered: true})
-	observer.observe({type: "largest-contentful-paint", buffered: true})
 }
 
 main()

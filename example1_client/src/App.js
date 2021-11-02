@@ -1,7 +1,7 @@
-const App = ({ emojies } = {}) => {
+const App = ({ data } = {}) => {
 	const template = () => 
 		`<div class='app'>
-			${emojies ? JSON.stringify(emojies) : 'Loading...'}
+			${JSON.stringify(data)}
 		</div>`
 
 	const render = parent => {
